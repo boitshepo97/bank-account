@@ -27,17 +27,36 @@ M1 = BankAcount(1000)
 
 print(f"R{M1.finish_month()}")
 
-print(f"R{M1.deposit(300)}")
-# class Bank:
-#     def __init__(self):
-      
-      
-#     def withdraw(bank_account_number,amount):
-        
-#     def deposit(bank_account_number,amount):
-        
-#     def transfer(from_bank_account_number,to_bank_account_number, amount):
+print(f"R{M1.deposit()}")
 
+
+class Bank:
+    def __init__(self, bank_account_number, balance = 1000): 
+        self.bank_account_number = float(input("Bank Account: ")) 
+        self.balance = 1000
+   
+    def withdraw(bank_account_number,amount):
+        self.amount = float(input("Withdrawing Amount: ")) 
+        if self.balance >= self.amount: 
+            self.balance -= self.amount 
+            return self.balance  
+        else: 
+            return "Insufficient balance"
+        
+    def deposit(bank_account_number,amount):
+        self.amount = float(input("Depositing amount: "))
+        self.balance += self.amount
+        return bank_account_number, self.balance
+    
+    def transfer(from_bank_account_number,to_bank_account_number, amount):
+        self.amount = float(input("Transfer Amount: "))
+        if self.Balance >= self.amount:
+            self.balance -= self.amount
+            print(self.balance)
+            return "Transfer Successful"  
+        else: 
+            return "Insufficient Funds"
+        
 # class Customer:
 #     def __init__(self):
         
