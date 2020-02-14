@@ -35,7 +35,7 @@ class Bank:
         self.bank_account_number = float(input("Bank Account: ")) 
         self.balance = 1000
    
-    def withdraw(bank_account_number,amount):
+    def withdraw(self,bank_account_number,amount):
         self.amount = float(input("Withdrawing Amount: ")) 
         if self.balance >= self.amount: 
             self.balance -= self.amount 
@@ -43,14 +43,14 @@ class Bank:
         else: 
             return "Insufficient balance"
         
-    def deposit(bank_account_number,amount):
+    def deposit(self,bank_account_number,amount):
         self.amount = float(input("Depositing amount: "))
         self.balance += self.amount
         return bank_account_number, self.balance
     
-    def transfer(from_bank_account_number,to_bank_account_number, amount):
+    def transfer(self,from_bank_account_number,to_bank_account_number, amount):
         self.amount = float(input("Transfer Amount: "))
-        if self.Balance >= self.amount:
+        if self.balance >= self.amount:
             self.balance -= self.amount
             print(self.balance)
             return "Transfer Successful"  
