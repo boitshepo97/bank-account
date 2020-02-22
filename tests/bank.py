@@ -1,9 +1,9 @@
 from bank_account import BankAccount
 
 class Bank:
-    def __init__(self, bank_account_number, balance = 1000): 
-        self.bank_account_number = float(input("Bank Account: ")) 
-        self.balance = 1000
+    def __init__(self, accounts, balance):
+        self.__accounts = accounts
+        self.balance = balance
    
     def withdraw(self,bank_account_number,amount):
         self.amount = float(input("Withdrawing Amount: ")) 
